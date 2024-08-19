@@ -1,0 +1,306 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page animation */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #EEBA0B;
+    color: #000000;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F4E409;
+    color: #000000;
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin-right: 50px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F4E409;
+}
+
+/* Section for Recent Works */
+.recent-works {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.recent-works h1 {
+    font-size: 48px;
+    color: #000000;
+    margin-bottom: 40px;
+    margin-top: 70px;
+}
+
+/* Grid layout for the boxes */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Style for the work box */
+.work-box {
+    cursor: pointer; /* Make the box look clickable */
+}
+
+.work-box, .empty-box {
+    background-color: #C36F09;
+    color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 300px; /* Increased height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+}
+
+.work-box:hover, .empty-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.work-box h2 {
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 15px; /* Increased margin for spacing */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.work-box p {
+    font-size: 14px; /* Increased font size */
+    margin-bottom: 25px; /* Increased margin for spacing */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Ensure image fits within the box without overflowing */
+.work-image img {
+    max-width: 160px;
+    max-height: auto; /* Ensure the image height does not exceed the box size */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
+
+/* Responsive Design Adjustments */
+@media (max-width: 1440px) {
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recent-works {
+        margin-top: 40px; /* Adjusted margin for smaller screens */
+    }
+
+    .recent-works h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recent-works {
+        margin-top: 40px; /* Adjusted margin for smaller screens */
+    }
+
+    .recent-works h1 {
+        font-size: 36px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    * {
+        box-sizing: content-box;
+    }
+
+    header{
+        padding: 10px 20px;
+    }
+
+    .logo {
+       margin-right: 30px; 
+    }
+
+    nav ul li a{
+        margin-right: 1px;;
+    }
+
+    .recent-works h1 {
+        font-size: 36px;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .work-box, .empty-box {
+        height: auto;
+    }
+
+    .recent-works h1 {
+        margin-top: 55px;
+    }
+}
+
+@media (max-width: 425px) {
+    
+    nav ul {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .logo {
+        margin-right: 50px;
+    }
+
+    nav ul li {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .recent-works h1 {
+        margin-top: 65px;
+    }
+    
+}
+
+@media (max-width: 320px) {
+    header {
+        flex-direction: column;
+        padding: 0 0 0 0;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+    nav ul li{
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+
+    .logo {
+        margin-right: 50px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 10px;
+    }
+
+    .recent-works h1 {
+        margin-top: 55px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        padding: 0 0 0 0;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+    nav ul li a{
+        margin-right: 0;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+    
+    .recent-works h1 {
+        font-size: 28px;
+    }
+
+    .work-box h2 {
+        font-size: 16px;
+    }
+
+    .work-box p {
+        font-size: 12px;
+    }
+
+    .recent-works h1 {
+        margin-top: 55px;
+    }
+}

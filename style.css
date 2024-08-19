@@ -1,0 +1,394 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #42BFDD;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #084B83;
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    margin-right: 50px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #084B83;
+}
+
+/* Main Section */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between photo and text */
+    height: 80%;
+    text-align: center;
+}
+
+.photo {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    transition: filter 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #6ccff6;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay h2 {
+    font-family: 'Droid Serif', serif;
+    margin: 0;
+}
+
+.photo:hover .overlay {
+    opacity: 1;
+}
+
+.photo:hover img {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.info {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.info h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48px;
+    color: #000000
+}
+
+h2 {
+    display: inline-block;
+    font-size: 36px;
+    color: #000000;
+    position: relative;
+    animation: textAnimation 3s infinite;
+}
+
+@keyframes textAnimation {
+    0% {
+        color: #fff;
+        transform: translateY(0);
+    }
+    50% {
+        color: #ffffff;
+        transform: translateY(-10px);
+    }
+    100% {
+        color: #fff;
+        transform: translateY(0);
+    }
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#000000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e6460b;
+}
+
+.center-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow {
+    display: inline-block;
+    font-size: 24px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover .arrow {
+    transform: translateY(-4px);
+}
+
+/* Responsive Design */
+
+/* For Tablets (Portrait and Landscape) */
+@media (max-width: 1024px) {
+    .intro {
+        flex-direction: column;
+        gap: 20px; /* Space between photo and text */
+    }
+
+    .photo {
+        margin-bottom: 20px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .info h1 {
+        font-size: 36px;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+    }
+
+    nav ul li a{
+        margin-left: 20px;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .logo, nav ul {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .intro {
+        height: auto;
+        padding: 20px;
+    }
+
+    .photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .info h1 {
+        font-size: 28px;
+    }
+
+    nav ul li {
+        margin-left: 5px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 8px 16px;
+        position: relative; /* Or use position: absolute; */
+        top: 20px; /* Adjust the value to raise it up */
+    }
+
+    .arrow {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    
+    nav ul {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    nav ul li {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+}
+
+@media (max-width: 425px) {
+    
+    nav ul {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    nav ul li {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    
+}
+
+@media (max-width: 320px) {
+    header {
+        flex-direction: row;
+        padding: 0 0 0 0;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+    nav ul li{
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 10px;
+    }
+}
+
+/* For Small Mobile Devices */
+@media (max-width: 480px) {
+    
+    body{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 0 0 0 0;
+    }
+
+    nav ul {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    nav ul li a{
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+    
+
+    .intro{
+        margin-top: 150px;
+    }
+
+    .photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .info h1 {
+        font-size: 26px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 6px 12px;
+        position: relative; /* Or use position: absolute; */
+        top: 20px; /* Adjust the value to raise it up */
+    }
+
+    .arrow {
+        font-size: 18px;
+    }
+}
+
+/* For Very Large Screens (Desktops and TVs) */
+@media (min-width: 1440px) {
+    .photo {
+        width: 350px;
+        height: 350px;
+    }
+
+    .info h1 {
+        font-size: 60px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 20px;
+        padding: 12px 24px;
+    }
+
+    .arrow {
+        font-size: 26px;
+    }
+}

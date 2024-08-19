@@ -1,0 +1,544 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page animation */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #A7A2A9;
+    color: #000000;
+    line-height: 1.6;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #08090A;
+    color: #ffffff;
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin-right: 50px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #08090A;
+}
+
+/* Centered Container */
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.centered-container h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    margin-top: 60px;
+    color: #000000;
+}
+
+/* Info Section */
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.info-section img {
+    width: 600px;
+    height: 400px;
+    border-radius: 10px;
+    margin-right: 40px;
+}
+
+.info-content {
+    max-width: 400px;
+}
+
+.info-content p {
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+.info-content a {
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin-top: 25px;
+    padding: 7px 20px;
+    background-color: #cdced1;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.info-content a:hover {
+    background-color: #1E90FF;
+}
+
+/* Experience Section */
+.experience-section {
+    padding: 5px 20px 50px 20px;
+    width: 100%;
+    background-color: #F4F7F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-section h1 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: #000000;
+}
+
+/* Grid Container for Experience Items */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Experience Item */
+.experience {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #F4F7F5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.experience:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Company Name */
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Role */
+.role {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Dates */
+.dates {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Description */
+.description {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.5;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 25px 20px 35px 20px;
+    background-color: #F4F7F5;
+    text-align: center;
+}
+
+/* Grid Container for Skills Items */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Skill Item */
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #e3e4e5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.skill img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.skill span {
+    font-size: 18px;
+    color: #000000;
+}
+
+/* Hover Effect */
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Very Large Screens (Desktops and TVs) */
+@media (min-width: 1440px) {
+    .centered-container {
+        padding: 40px 0 25px 0;
+    }
+
+    .centered-container h1 {
+        font-size: 40px;
+    }
+
+    .info-section img {
+        width: 700px;
+        height: auto;
+    }
+
+    .info-content {
+        max-width: 500px;
+    }
+
+    .info-content p {
+        font-size: 28px;
+    }
+
+    .info-content a {
+        font-size: 28px;
+        padding: 10px 30px;
+    }
+
+    .experience-section h1 {
+        font-size: 50px;
+    }
+
+    .experience-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .skills-section {
+        padding: 15px 20px 35px 20px; /* Kept as before */
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    nav ul li a {
+        margin: 0 10px 0 10px;
+    }
+
+    .centered-container {
+        padding: 30px;
+    }
+
+    .centered-container h1 {
+        font-size: 28px;
+    }
+
+    .info-section {
+        flex-direction: column;
+    }
+
+    .info-content p {
+        font-size: 24px;
+        margin: 0 5px 0 5px;
+    }
+
+    .info-content a {
+        font-size: 20px;
+    }
+
+    .experience-section h1 {
+        font-size: 28px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr; /* One column layout for experience grid */
+        gap: 20px; /* Space between the boxes */
+    }
+
+    .experience {
+        width: 100%; /* Full width of the container */
+        height: auto; /* Adjust height based on content */
+        padding: 20px; /* Padding for better spacing */
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr); /* Four columns layout for skills grid */
+        gap: 10px; /* Space between the boxes */
+    }
+
+    .skill {
+        width: 100px; /* Fixed width to create a square */
+        height: 100px; /* Fixed height to create a square */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px; /* Padding for better spacing */
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+    }
+
+    .skill img {
+        width: 60px; /* Adjust the size of the emblem */
+        height: 60px; /* Keep the emblem square */
+        margin-bottom: 5px; /* Space below the emblem */
+    }
+
+    .skill span {
+        font-size: 12px; /* Adjust the text size for better readability */
+        color: #000000;
+    }
+
+    .experience-section {
+        padding: 60px 20px 0px 20px; /* Adjust padding as needed */
+    }
+
+    .skills-section {
+        padding: 25px 20px 35px 20px; /* Kept as before */
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        padding: 0 0 0 0;
+    }
+
+    nav ul {
+        width: 100%;
+        margin-right: 0
+    }
+
+    nav ul li {
+        margin: 0 0 0 0;
+    }
+
+    nav ul li a{
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    .logo {
+        margin: 0 0 0 0;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .centered-container {
+        padding: 15px;
+    }
+
+    .centered-container h1 {
+        font-size: 24px;
+    }
+
+    .info-section img {
+        width: 300px;
+        height: auto;
+        margin: 0;
+    }
+
+    .info-content p {
+        font-size: 16px;
+        margin: 0 5px 0 5px;
+    }
+
+    .info-content a {
+        font-size: 18px;
+    }
+
+    .experience-section h1 {
+        font-size: 28px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr; /* One column layout */
+        gap: 20px; /* Space between the boxes */
+    }
+
+    .experience {
+        width: 100%; /* Full width of the container */
+        height: auto; /* Adjust height based on content */
+        padding: 20px; /* Padding for readability */
+        margin: 0 auto; /* Center the box horizontally */
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+        gap: 10px; /* Space between the boxes */
+        justify-items: center; /* Center the items horizontally */
+    }
+
+    .skill {
+        width: 100px; /* Fixed width to create a square */
+        height: 100px; /* Fixed height to create a square */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px; /* Padding for better spacing */
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+    }
+
+    .skill img {
+        width: 60px; /* Adjust the size of the emblem */
+        height: 60px; /* Keep the emblem square */
+        margin-bottom: 5px; /* Space below the emblem */
+    }
+
+    .skill span {
+        font-size: 12px; /* Adjust the text size */
+        color: #000000;
+    }
+
+    .experience-section {
+        padding: 10px 20px 0px 20px; /* Slightly reduced padding */
+    }
+
+    .skills-section {
+        padding: 25px 20px 35px 20px; /* Kept as before */
+    }
+}
+
+@media (max-width: 375px) {
+    .logo {
+        margin: 0 0 0 0;
+    }
+
+    nav ul {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    nav ul li{
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+
+    nav ul li a{
+        margin: 0 2px 0 2px;
+    }
+    
+}
+
+@media (max-width: 320px) {
+    header {
+        flex-direction: column;
+        padding: 0 0 0 0;
+    }
+
+    .logo {
+        margin: 0 0 0 0;
+    }
+
+    nav ul {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul li{
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+
+    nav ul li a{
+        margin: 0 2px 0 2px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
