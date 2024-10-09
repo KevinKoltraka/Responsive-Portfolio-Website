@@ -146,6 +146,11 @@ nav ul li a:hover {
     object-fit: cover;
 }
 
+.cooking-image img {
+    width: 120px;
+    max-height: 105px;
+}
+
 
 /* Responsive Design Adjustments */
 @media (max-width: 1440px) {
